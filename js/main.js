@@ -5,7 +5,6 @@ function applyConfig() {
   document.getElementById('ev-name').textContent = CONFIG.eventName;
   document.getElementById('ev-date').textContent = CONFIG.eventDate;
   document.getElementById('ev-place').textContent = CONFIG.eventPlace;
-  document.getElementById('ev-price').textContent = CONFIG.priceLabel;
   document.getElementById('ev-cupo').textContent = CONFIG.cupoNote;
 
   const tagEl = document.getElementById('ev-tag');

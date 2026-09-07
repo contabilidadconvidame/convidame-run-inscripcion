@@ -12,15 +12,18 @@
 <body>
 
 <div class="hero">
-  <div class="logo-badge"><img src="assets/convidame-logo.png" alt="Convidame"></div>
-  <h1 class="display" id="ev-name">CONVIDAME RUN</h1>
-  <p class="tag" id="ev-tag">5K social y recreativo</p>
-  <div class="meta-row">
-    <span class="meta-pill">📅 <b id="ev-date">—</b></span>
-    <span class="meta-pill">📍 <b id="ev-place">—</b></span>
-    <span class="meta-pill">💳 <b id="ev-price">—</b></span>
+  <div class="hero-inner">
+    <div class="hero-text">
+      <h1 class="display" id="ev-name">SOCIAL MOVE</h1>
+      <p class="tag" id="ev-tag">4K SESSION</p>
+      <div class="meta-row">
+        <span class="meta-pill">📅 <b id="ev-date">—</b></span>
+        <span class="meta-pill">📍 <b id="ev-place">—</b></span>
+      </div>
+      <button class="cta-primary" onclick="document.getElementById('form-section').scrollIntoView({behavior:'smooth'})">Quiero inscribirme ↓</button>
+    </div>
+    <img class="hero-logo" src="assets/LOGOSJUNTOS.png" alt="Convidame · Rompiendo el Molde">
   </div>
-  <button class="cta-primary" onclick="document.getElementById('form-section').scrollIntoView({behavior:'smooth'})">Quiero inscribirme ↓</button>
 </div>
 
 <section class="block" id="desc-section" style="display:none;">
@@ -30,7 +33,7 @@
 
 <section class="block" id="form-section">
   <p class="section-title">Inscripción</p>
-  <p class="desc" id="ev-cupo">Completá tus datos. Nos vamos a contactar por mail o teléfono para coordinar el pago y confirmar tu lugar.</p>
+  <p class="desc" id="ev-cupo">Completá el formulario y nos ponemos en contacto con vos.</p>
 
   <div class="card" id="form-card">
     <form id="reg-form" novalidate>
@@ -72,8 +75,14 @@
   </div>
 
   <div class="confirm-wrap" id="confirm-wrap">
-    <div class="guest-note show">
-      ¡Gracias! Te vamos a contactar por mail/teléfono para coordinar el pago y confirmar tu lugar.
+    <div class="confirm-highlight">
+      <p class="confirm-highlight-title">¡ESTÁS A UN PASO DE SER PARTE! 🙌</p>
+      <p>Gracias por dejarnos tus datos.</p>
+      <p>Para completar tu inscripción a <strong>SOCIAL MOVE</strong>, nos vamos a contactar con vos desde <strong>CONVIDAME EVENTOS</strong>.</p>
+      <p>📲 Vas a recibir un mensaje de WhatsApp desde el número <strong class="nowrap">2995966666</strong>, donde te enviaremos la información necesaria para realizar el pago.</p>
+      <p>Tu lugar quedará confirmado una vez realizado el pago.</p>
+      <p>Nos vemos para compartir una mañana de movimiento, buena energía y comunidad.</p>
+      <p class="confirm-highlight-tagline">SOCIAL MOVE — Movimiento que conecta.</p>
     </div>
   </div>
 </section>

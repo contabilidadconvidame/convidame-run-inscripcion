@@ -33,16 +33,39 @@ img{max-width:100%;display:block;}
   background:radial-gradient(circle, rgba(255,255,255,0.16) 0%, rgba(255,255,255,0) 70%);
   pointer-events:none;
 }
-.logo-badge{
-  display:inline-flex;
-  background:var(--white);
-  border-radius:12px;
-  padding:10px 16px;
-  margin-bottom:30px;
+/* El hero es de dos columnas: el texto (título, subtítulo, fecha/lugar,
+   botón) a la izquierda, y el logo combinado a la derecha — así se
+   balancea el ancho del encabezado ahora que el texto quedó alineado a
+   la izquierda en vez de centrado. flex-wrap para que en pantallas
+   angostas el logo baje debajo del texto en vez de achicharse. */
+.hero-inner{
+  display:flex;
+  align-items:flex-start;
+  justify-content:space-between;
+  gap:20px;
+  flex-wrap:wrap;
 }
-.logo-badge img{height:22px;width:auto;}
+.hero-text{flex:1 1 260px;min-width:0;}
+.hero-logo{
+  flex:0 0 auto;
+  /* Mismo clamp() que el font-size de .hero h1: así el logo queda
+     aproximadamente a la altura del título "SOCIAL MOVE", sin
+     necesidad de dos valores mantenidos a mano por separado. */
+  height:clamp(46px,12vw,80px);
+  width:auto;
+}
 .hero h1{font-size:clamp(46px,12vw,80px);margin:0;text-transform:uppercase;color:var(--ink);}
-.hero .tag{font-size:clamp(16px,4vw,20px);color:#F0FAFB;margin:10px 0 26px;max-width:34ch;}
+.hero .tag{
+  font-family:'Poppins',sans-serif;
+  font-weight:800;
+  font-style:italic;
+  letter-spacing:0.01em;
+  text-transform:uppercase;
+  font-size:clamp(26px,6vw,38px);
+  color:var(--ink);
+  margin:2px 0 26px;
+  max-width:34ch;
+}
 .meta-row{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:30px;}
 .meta-pill{background:rgba(251,250,245,0.16);border:1px solid rgba(251,250,245,0.35);border-radius:999px;padding:8px 16px;font-size:13.5px;display:flex;align-items:center;gap:7px;}
 .meta-pill b{font-weight:600;}
@@ -70,11 +93,42 @@ section.block{max-width:640px;margin:0 auto;padding:52px 22px;}
 .form-msg{font-size:13.5px;color:var(--clay);margin-top:10px;display:none;}
 
 .confirm-wrap{display:none;}
-.guest-note{
-  background:var(--paper-2);border-radius:var(--radius);padding:18px 20px;margin-bottom:16px;
-  font-size:14px;line-height:1.5;display:none;
+
+/* Tarjeta destacada del mensaje final (después de enviar el formulario).
+   A propósito ocupa un espacio parecido al del formulario que reemplaza:
+   es el único mensaje que ve la persona, así que tiene que notarse. */
+.confirm-highlight{
+  background:var(--paper-2);
+  border:3px solid var(--teal-deep);
+  border-radius:var(--radius);
+  padding:34px 26px;
+  text-align:center;
 }
-.guest-note.show{display:block;}
+.confirm-highlight p{
+  font-size:16.5px;
+  line-height:1.6;
+  color:var(--ink);
+  margin:0 0 16px;
+}
+.confirm-highlight p:last-child{margin-bottom:0;}
+.confirm-highlight strong{color:var(--teal-deep);}
+.confirm-highlight .nowrap{white-space:nowrap;}
+.confirm-highlight-title{
+  font-family:'Poppins',sans-serif;
+  font-weight:800;
+  font-style:italic;
+  font-size:clamp(24px,6vw,32px);
+  line-height:1.15;
+  color:var(--teal-deep);
+  margin-bottom:20px !important;
+}
+.confirm-highlight-tagline{
+  font-weight:700;
+  color:var(--teal-deep);
+  text-transform:uppercase;
+  letter-spacing:0.03em;
+  font-size:15px !important;
+}
 
 footer{text-align:center;padding:40px 22px 46px;color:var(--ink-soft);font-size:12.5px;}
 footer img.wordmark{height:20px;width:auto;margin:0 auto 8px;}
