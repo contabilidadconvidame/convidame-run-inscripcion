@@ -2,98 +2,31 @@
 <html lang="es">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Inscripción · Convidame Eventos</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,600;0,700;1,800;1,900&family=Work+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/styles.css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SOCIAL MOVE · Sold out</title>
+<style>
+  html, body {
+    margin: 0;
+    padding: 0;
+    background: #111;
+  }
+  main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+  }
+  img {
+    display: block;
+    width: 100%;
+    max-width: 560px;
+    height: auto;
+  }
+</style>
 </head>
 <body>
-
-<div class="hero">
-  <div class="hero-inner">
-    <div class="hero-text">
-      <h1 class="display" id="ev-name">SOCIAL MOVE</h1>
-      <p class="tag" id="ev-tag">4K SESSION</p>
-      <div class="meta-row">
-        <span class="meta-pill">📅 <b id="ev-date">—</b></span>
-        <span class="meta-pill">📍 <b id="ev-place">—</b></span>
-      </div>
-      <button class="cta-primary" onclick="document.getElementById('form-section').scrollIntoView({behavior:'smooth'})">Quiero inscribirme ↓</button>
-    </div>
-    <img class="hero-logo" src="assets/LOGOSJUNTOS.png" alt="Convidame · Rompiendo el Molde">
-  </div>
-</div>
-
-<section class="block" id="desc-section" style="display:none;">
-  <p class="section-title">El evento</p>
-  <p class="desc" id="ev-desc"></p>
-</section>
-
-<section class="block" id="form-section">
-  <p class="section-title">Inscripción</p>
-  <p class="desc" id="ev-cupo">Completá el formulario y nos ponemos en contacto con vos.</p>
-
-  <div class="card" id="form-card">
-    <form id="reg-form" novalidate>
-      <div class="row2">
-        <div class="field" data-field="nombre">
-          <label>Nombre <span class="req">*</span></label>
-          <input type="text" name="nombre" autocomplete="given-name">
-          <div class="field-error">Ingresá tu nombre.</div>
-        </div>
-        <div class="field" data-field="apellido">
-          <label>Apellido <span class="req">*</span></label>
-          <input type="text" name="apellido" autocomplete="family-name">
-          <div class="field-error">Ingresá tu apellido.</div>
-        </div>
-      </div>
-      <div class="field" data-field="dni">
-        <label>DNI <span class="req">*</span></label>
-        <input type="text" name="dni" inputmode="numeric" autocomplete="off">
-        <div class="field-error">Ingresá un DNI válido.</div>
-      </div>
-      <div class="row2">
-        <div class="field" data-field="email">
-          <label>Email <span class="req">*</span></label>
-          <input type="email" name="email" autocomplete="email">
-          <div class="field-error">Ingresá un email válido.</div>
-        </div>
-        <div class="field" data-field="telefono">
-          <label>Teléfono <span class="req">*</span></label>
-          <input type="tel" name="telefono" autocomplete="tel">
-          <div class="field-error">Ingresá tu teléfono.</div>
-        </div>
-      </div>
-      <div id="extra-fields"></div>
-
-      <button type="submit" class="submit-btn" id="submit-btn">Confirmar datos</button>
-      <p class="form-msg" id="form-msg"></p>
-      <p class="form-note">Tus datos quedan registrados para la organización de Convidame Eventos.</p>
-    </form>
-  </div>
-
-  <div class="confirm-wrap" id="confirm-wrap">
-    <div class="confirm-highlight">
-      <p class="confirm-highlight-title">¡ESTÁS A UN PASO DE SER PARTE! 🙌</p>
-      <p>Gracias por dejarnos tus datos.</p>
-      <p>Para completar tu inscripción a <strong>SOCIAL MOVE</strong>, nos vamos a contactar con vos desde <strong>CONVIDAME EVENTOS</strong>.</p>
-      <p>📲 Vas a recibir un mensaje de WhatsApp desde el número <strong class="nowrap">2995966666</strong>, donde te enviaremos la información necesaria para realizar el pago.</p>
-      <p>Tu lugar quedará confirmado una vez realizado el pago.</p>
-      <p>Nos vemos para compartir una mañana de movimiento, buena energía y comunidad.</p>
-      <p class="confirm-highlight-tagline">SOCIAL MOVE — Movimiento que conecta.</p>
-    </div>
-  </div>
-</section>
-
-<footer>
-  <img class="wordmark" src="assets/convidame-logo.png" alt="Convidame">
-  <p>Experiencias que inspiran a vivir mejor</p>
-</footer>
-
-<script src="js/config.js"></script>
-<script src="js/api.js"></script>
-<script src="js/main.js"></script>
+<main>
+  <img src="assets/sold-out.jpg" alt="SOCIAL MOVE 4K Session · Sold out. ¡Gracias por ser parte!">
+</main>
 </body>
 </html>
